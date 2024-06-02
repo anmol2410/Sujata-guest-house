@@ -1,0 +1,177 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e7e7e7;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-right: 25px; /* Add margin to shift the Sign In or Join section */
+}
+
+.navbar-item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.navbar-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link i {
+  margin-right: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar-item:hover .dropdown-menu {
+  display: block;
+}
+
+.hotel-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 20px 20px; /* Adjust padding to avoid overlap with fixed navbar */
+  background-color: #faf6eb;
+}
+
+.hotel-info-left {
+  display: flex;
+  align-items: center;
+}
+
+.hotel-logo {
+  height: 60px; /* Adjust based on the actual logo size */
+  margin-right: 20px;
+}
+
+.hotel-details h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hotel-details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.hotel-info-right .book-now-btn {
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sub-navbar {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #faf6eb;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.sub-navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hotel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hotel-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.hotel-left {
+  flex: 1;
+  padding: 20px;
+}
+
+.hotel-photo {
+  width: 100%;
+  height: auto;
+}
+
+.hotel-right {
+  flex: 2;
+  padding: 20px;
+}
+
+.hotel-right h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hotel-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
