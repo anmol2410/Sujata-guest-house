@@ -1,21 +1,28 @@
-let currentSlide = 0;
-
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slide');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
-    }
-    const offset = -currentSlide * 100;
-    document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
-}
-
-function moveSlide(direction) {
-    showSlide(currentSlide + direction);
-}
-
-// Initialize the slider
-showSlide(currentSlide);
+document.addEventListener('DOMContentLoaded', () => {
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarRight = document.getElementById('navbar-right');
+    const subNavbarToggle = document.getElementById('sub-navbar-toggle');
+    const subNavbarLinks = document.getElementById('sub-navbar-links');
+  
+    navbarToggle.addEventListener('click', () => {
+      navbarRight.classList.toggle('active');
+    });
+  
+    subNavbarToggle.addEventListener('click', () => {
+      subNavbarLinks.classList.toggle('active');
+    });
+  
+    // Accessibility enhancements
+    navbarToggle.setAttribute('aria-expanded', 'false');
+    navbarToggle.addEventListener('click', () => {
+      const expanded = navbarToggle.getAttribute('aria-expanded') === 'true' || false;
+      navbarToggle.setAttribute('aria-expanded', !expanded);
+    });
+  
+    subNavbarToggle.setAttribute('aria-expanded', 'false');
+    subNavbarToggle.addEventListener('click', () => {
+      const expanded = subNavbarToggle.getAttribute('aria-expanded') === 'true' || false;
+      subNavbarToggle.setAttribute('aria-expanded', !expanded);
+    });
+  });
+  
