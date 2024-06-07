@@ -1,10 +1,11 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'perpetua';
   margin: 0;
   padding: 0;
 }
 
 .navbar {
+  width: 1320px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +14,6 @@ body {
   border-bottom: 1px solid #e7e7e7;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 1000;
 }
 
@@ -38,11 +38,13 @@ body {
 .navbar-right {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .navbar-right .navbar-item {
   position: relative;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .navbar-link {
@@ -151,11 +153,33 @@ body {
   font-weight: bold;
 }
 
-.hotel-image {
-  width: 100%;
-  height: auto;
-  display: block;
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+
 
 .hotel-content {
   padding: 40px 20px;
@@ -480,5 +504,15 @@ footer {
   .social-icons img {
       width: 16px;
       height: 16px;
+  }
+  .facilities-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
